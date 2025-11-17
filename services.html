@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEEE & Data Assurance Services | RENVIA IT LTD Premium ITAD</title>
+    <meta name="description" content="Explore RENVIA IT LTD's fully insured, tiered ITAD services: Standard, Premium Corporate, and Managed Enterprise solutions. Specializing in secure disposal of Laptops, PCs, CPUs, and Servers.">
+    <link rel="canonical" href="https://www.renviait.co.uk/services.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* 1. Global & Typography */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lato:wght@300;400;700&display=swap');
+
+        :root {
+            --color-navy: #001f3f; /* Deep Navy Blue (Trust, Regal) */
+            --color-gold: #c5a870; /* Subtle Gold/Bronze (Premium, Value) */
+            --color-green: #228B22; /* Forest Green (ESG, Sustainability) */
+            --color-white: #ffffff;
+            --color-light-grey: #f4f4f9;
+            --color-dark-grey: #333333;
+            --color-medium-grey: #666666;
+            --font-family-primary: 'Roboto', 'Lato', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-family-primary);
+            line-height: 1.6;
+            color: var(--color-dark-grey);
+            background-color: var(--color-light-grey);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+        /* Headings & Text */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            margin-bottom: 0.8em;
+            color: var(--color-navy);
+        }
+        h1 { font-size: 2.8em; line-height: 1.1; }
+        h2 { font-size: 2.2em; border-bottom: 3px solid var(--color-gold); padding-bottom: 0.2em; display: inline-block; }
+        h3 { font-size: 1.8em; }
+        a { color: var(--color-navy); text-decoration: none; transition: color 0.3s ease; }
+        a:hover { color: var(--color-green); text-decoration: underline; }
+
+        /* Buttons (Monetization Driver) */
+        .button {
+            display: inline-block;
+            background-color: var(--color-green); /* Primary Action Color is Green */
+            color: var(--color-white);
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .button:hover {
+            background-color: #1a6f1a; /* Darker Green */
+            transform: translateY(-2px);
+        }
+
+        .button.premium {
+            background-color: var(--color-gold); /* Gold for high-value action */
+            color: var(--color-navy);
+        }
+        .button.premium:hover {
+            background-color: #b39a67; /* Darker Gold */
+            transform: translateY(-3px);
+        }
+
+        /* 2. Header & Navigation */
+        .header {
+            background-color: var(--color-navy);
+            color: var(--color-white);
+            padding: 1rem 0;
+            border-bottom: 4px solid var(--color-green);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--color-gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .logo-text span {
+            color: var(--color-green); /* Highlight IT in Green */
+            font-weight: 900;
+        }
+        .logo-icon {
+            color: var(--color-green);
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .main-nav a {
+            color: var(--color-white);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding-bottom: 5px;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: var(--color-green);
+            border-bottom: 2px solid var(--color-gold);
+        }
+
+        /* Mobile Navigation */
+        .nav-toggle { display: none; background: none; border: none; color: var(--color-white); font-size: 2em; cursor: pointer; padding: 0; }
+
+        /* 3. Main Content Sections */
+        .main-content {
+            flex: 1;
+            padding: 2rem 0;
+        }
+
+        .section {
+            padding: 3rem 0;
+            background-color: var(--color-white);
+            margin-bottom: 2rem;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+
+        .section.hero {
+            background-color: var(--color-navy);
+            color: var(--color-white);
+            text-align: center;
+            padding: 6rem 0;
+            border-bottom: 5px solid var(--color-gold);
+            min-height: 450px;
+        }
+
+        .hero h1 {
+            color: var(--color-gold);
+            font-size: 3.8em;
+            margin-bottom: 0.3em;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            max-width: 900px;
+            margin: 0 auto 2em auto;
+            line-height: 1.3;
+            color: var(--color-light-grey);
+        }
+        .hero strong {
+            color: var(--color-green);
+        }
+
+        .key-actions {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .key-actions .button {
+            padding: 18px 35px;
+            font-size: 1.25em;
+            border-radius: 8px;
+            min-width: 250px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Highlights Section */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 2rem;
+        }
+
+        .highlight-item {
+            background-color: var(--color-light-grey);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--color-green);
+        }
+
+        .highlight-item h3 { color: var(--color-navy); font-size: 1.5em; margin-bottom: 1em; }
+
+        .highlight-item .logos img { max-height: 60px; margin: 0 15px; filter: grayscale(80%); opacity: 0.7; transition: all 0.3s ease; }
+        .highlight-item .logos img:hover { filter: grayscale(0%); opacity: 1; }
+
+        .highlight-item .stats p {
+            font-size: 2.8em;
+            font-weight: 700;
+            color: var(--color-green);
+            margin-bottom: 0.1em;
+        }
+        .highlight-item .stats span { font-size: 1.1em; color: var(--color-medium-grey); }
+
+        /* Service Blocks (Tiered Monetization) */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 2rem;
+        }
+
+        .service-block {
+            background-color: var(--color-white);
+            border: 2px solid var(--color-light-grey);
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-block:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-block.premium-tier {
+            border-color: var(--color-gold);
+            background-color: var(--color-light-grey);
+        }
+
+        .service-block h3 {
+            color: var(--color-navy);
+            font-size: 1.8em;
+            position: relative;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+
+        .service-block h3::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-green);
+        }
+
+        .service-block.premium-tier h3::after {
+            background-color: var(--color-gold);
+        }
+
+        .service-block p { color: var(--color-dark-grey); margin-bottom: 1.5em; flex-grow: 1; }
+        .service-block p strong { color: var(--color-green); }
+
+        .service-block .button { margin-top: 1.5em; width: 90%; max-width: 280px; align-self: center; }
+
+        /* Support Page - Lead Magnet Integration */
+        .lead-magnet {
+            background-color: var(--color-navy);
+            color: var(--color-white);
+            padding: 3rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 3rem;
+            border: 3px solid var(--color-gold);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .lead-magnet h3 {
+            color: var(--color-gold);
+            margin-bottom: 1em;
+            font-size: 2em;
+            line-height: 1.2;
+        }
+
+        .lead-magnet p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--color-light-grey);
+        }
+
+        .lead-magnet .button {
+            background-color: var(--color-green);
+            color: var(--color-white);
+            padding: 18px 35px;
+            font-size: 1.2em;
+            font-weight: 700;
+            border: 2px solid var(--color-white);
+        }
+        .lead-magnet .button:hover {
+            background-color: var(--color-gold);
+            color: var(--color-navy);
+            border-color: var(--color-navy);
+        }
+
+        /* About Page - Trust and Legacy */
+        .certification-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 2em;
+        }
+
+        .certification-badges img {
+            max-height: 90px;
+            filter: saturate(0.5);
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .certification-badges img:hover {
+            filter: saturate(1);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* 4. Footer (Updated for Compliance Numbers) */
+        .footer {
+            background-color: var(--color-navy);
+            color: var(--color-white);
+            padding: 3rem 0;
+            margin-top: auto;
+            border-top: 4px solid var(--color-green);
+            font-size: 0.9em;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .footer-col h4 {
+            color: var(--color-gold);
+            margin-bottom: 1.2em;
+            font-size: 1.1em;
+        }
+
+        .footer-col a {
+            color: var(--color-light-grey);
+        }
+
+        .footer-col a:hover {
+            color: var(--color-green);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--color-light-grey);
+        }
+
+        .legal-identifiers {
+            margin-top: 1em;
+            font-size: 0.8em;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.7); /* Subtle white */
+        }
+
+        .legal-identifiers strong {
+            color: var(--color-green);
+            font-weight: 700;
+        }
+
+
+        .social-icons a {
+            color: var(--color-white);
+            font-size: 1.5em;
+        }
+
+        .social-icons a:hover {
+            color: var(--color-green);
+        }
+
+        /* 5. Responsive Design */
+        @media (max-width: 768px) {
+            .header-content { flex-wrap: wrap; justify-content: center; }
+            .logo { width: 100%; text-align: center; margin-bottom: 1rem; justify-content: center; }
+            .nav-toggle { display: block; position: absolute; right: 5%; top: 20px; }
+            .main-nav ul { flex-direction: column; gap: 10px; display: none; }
+            .main-nav ul.show { display: flex; }
+            .hero h1 { font-size: 2.5em; }
+            .hero p { font-size: 1.1em; }
+            .key-actions { flex-direction: column; align-items: center; gap: 20px; }
+            .key-actions .button { width: 90%; max-width: 300px; }
+            .highlights-grid, .service-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const mainNavUl = document.querySelector('.main-nav ul');
+
+            if (navToggle && mainNavUl) {
+                navToggle.addEventListener('click', function () {
+                    mainNavUl.classList.toggle('show');
+                });
+                mainNavUl.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (mainNavUl.classList.contains('show')) {
+                            mainNavUl.classList.remove('show');
+                        }
+                    });
+                });
+            }
+
+            document.querySelectorAll('.faq-item h3').forEach(item => {
+                item.addEventListener('click', event => {
+                    const paragraph = item.nextElementSibling;
+                    const isActive = item.classList.contains('active');
+                    document.querySelectorAll('.faq-item h3.active').forEach(activeItem => {
+                        if (activeItem !== item) {
+                            activeItem.classList.remove('active');
+                            activeItem.nextElementSibling.classList.remove('show');
+                        }
+                    });
+                    item.classList.toggle('active');
+                    paragraph.classList.toggle('show');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <div class="header-content container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-leaf logo-icon"></i>
+                <span class="logo-text">RENVIA<span style="color:var(--color-gold)">IT</span></span>
+            </a>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="#booking-link" class="button button-nav button-premium" style="padding: 8px 15px;">Book a Pickup</a></li>
+                    <li><a href="#dashboard-link">User Dashboard</a></li>
+                    <li><a href="support.html">Help & Support</a></li>
+                    <li><a href="about.html">About & Legal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content" id="main-content">
+        <section class="section">
+            <div class="container">
+                <h1 style="text-align:center; font-size:2.5em;">WEEE & Data Assurance Services: Tiered for Maximum ROI</h1>
+                <p style="text-align:center; max-width: 800px; margin: 1em auto 3em;">We offer three levels of fully insured service designed to maximize residual value, ensure compliance, and provide verifiable environmental reports, specializing in **high-value items** for optimized remarketing.</p>
+
+                <div class="service-grid">
+                    <article class="service-block">
+                        <h3>Individual ITAD (Standard)</h3>
+                        <p>Designed for small offices or single-site clearouts. Basic WEEE compliance and certified data destruction (software wipe). Suitable for general clearance.</p>
+                        <p>Specializing in **Laptops, PCs, and CPUs** for potential buy-back valuation.</p>
+                        <ul>
+                            <li><i class="fas fa-check" style="color:var(--color-green)"></i> Certified Data Erasure (Standard)</li>
+                            <li><i class="fas fa-check" style="color:var(--color-green)"></i> Basic WEEE Disposal Certificate</li>
+                            <li><i class="fas fa-times" style="color:#cc0000"></i> No On-site Destruction</li>
+                        </ul>
+                        <a href="#booking-link" class="button">Request Standard Pickup</a>
+                    </article>
+
+                    <article class="service-block premium-tier" id="corporate">
+                        <h3>Corporate Packages (Premium Profit Driver)</h3>
+                        <p>Our most popular tier. Full audit trail, secure logistics, and mandatory **physical destruction** options. Includes detailed Green IT reporting for ESG compliance. **Fully Insured for Transit.**</p>
+                        <p>Focus on **High-Value Assets** (Servers, CPUs, high-spec Laptops) maximizing return on remarketing and certified recycling.</p>
+                        <ul>
+                            <li><i class="fas fa-star" style="color:var(--color-gold)"></i> **Premium** Green IT Report (ESG Ready)</li>
+                            <li><i class="fas fa-lock" style="color:var(--color-gold)"></i> On-site Data Destruction Option</li>
+                            <li><i class="fas fa-shield-alt" style="color:var(--color-gold)"></i> Full Audit Trail & Asset Register</li>
+                        </ul>
+                        <a href="#booking-link" class="button button-premium">Secure Your Premium Service</a>
+                    </article>
+
+                    <article class="service-block">
+                        <h3>Charity & Clearance Leads (Managed Enterprise)</h3>
+                        <p>Fully managed, volume-based clearance for large enterprises, charities, or complex sites. Dedicated account manager and custom logistics planning. **Total peace of mind with full insurance.**</p>
+                        <p>We handle volume disposal, from **PCs to Network Hardware**, ensuring complete compliance and highest resource recovery.</p>
+                        <ul>
+                            <li><i class="fas fa-user-tie" style="color:var(--color-green)"></i> Dedicated Account Manager</li>
+                            <li><i class="fas fa-chart-line" style="color:var(--color-green)"></i> Quarterly Strategy Review (Legacy Focus)</li>
+                            <li><i class="fas fa-globe-europe" style="color:var(--color-green)"></i> Full UK Coverage & Logistics</li>
+                        </ul>
+                        <a href="#booking-link" class="button">Contact Sales for Quote</a>
+                    </article>
+                </div>
+                
+                <p style="text-align:center; margin-top: 3em; font-size:1.1em;">Ready to start? Use our **Premium Booking Link** to begin the secure valuation process.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Contact RENVIAIT (Milton Keynes)</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Milton Keynes, UK</li>
+                    <li><i class="fas fa-phone"></i> +44 (0)1908 555 888</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@renviait.co.uk">info@renviait.co.uk</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#booking-link">Book a Collection Now</a></li>
+                    <li><a href="#dashboard-link">Client Dashboard Login</a></li>
+                    <li><a href="services.html#corporate">Corporate Packages</a></li>
+                    <li><a href="support.html#faqs">FAQ & Knowledgebase</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Compliance</h4>
+                <ul>
+                    <li><a href="about.html">About RENVIA IT LTD</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="about.html#certifications">Certifications & Accreditations</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <p>Stay informed on ESG and Data Security updates.</p>
+                <div class="social-icons">
+                    <a href="#social-linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#social-twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#social-facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 RENVIA IT LTD. All Rights Reserved.
+            <div class="legal-identifiers">
+                Registered Company: <strong>RENVIA IT LTD (16825317)</strong> | 
+                Waste Carrier/Dealer No: <strong>CBDU609314</strong> | 
+                <a href="about.html#certifications" style="color:var(--color-green); text-decoration: none;">Fully ICO Certified & Insured</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
